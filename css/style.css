@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcd1e2;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 80px;
+    padding: 8px;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-item {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #62162f;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-burger {
+        display: block;
+        cursor: pointer;
+        height: 3.25rem;
+        width: 3.25rem;
+        position: relative;
+    }
+    
+    .navbar-burger span {
+        background-color: #333;
+        display: block;
+        height: 1px;
+        width: 16px;
+        position: absolute;
+        left: calc(50% - 8px);
+        transform-origin: center;
+        transition: all 0.3s ease-out;
+    }
+    
+    .navbar-burger span:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+    
+    .navbar-burger span:nth-child(2) {
+        top: calc(50%);
+    }
+    
+    .navbar-burger span:nth-child(3) {
+        top: calc(50% + 6px);
+    }
+    
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fcd1e2;
+        padding: 10px 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+    
+    .navbar-menu.is-active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-item {
+        margin: 10px 0;
+        padding: 8px 16px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.section {
+    padding: 3rem 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.image img, .bio-image img, .is-rounded {
+    transition: all 0.3s ease;
+}
+
+.is-rounded:hover {
+    transform: scale(1.05);
+}
+
+h2.title {
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}

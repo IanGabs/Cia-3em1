@@ -1,0 +1,160 @@
+.my-custom-color-primary {
+    background-color: #fcd1e2;
+}
+
+.my-custom-color-secundary {
+    background-color: #330000;
+}
+
+.my-custom-color-treis {
+    background-color: #62162f;
+}
+
+.my-custom-color-quatro {
+    background-color: #96305a;
+}
+
+.my-custom-color-cinco {
+    background-color: #ca678e;
+}
+
+.my-custom-color-seis {
+    background-color: #520a0a;
+}
+
+.navbar-item {
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 1.4vh;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    background-color: #62162f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-item:hover {
+    color: #62162f;
+}
+
+.navbar-item:hover::after {
+    transform: scaleX(1);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+    padding: 0;
+    margin: 0 20px;
+}
+
+.text-content {
+    padding: 0 20px;
+}
+
+.section[id^="bio-"] {
+    padding: 3rem 1.5rem;
+}
+
+.section[id^="bio-"] h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.section[id^="bio-"] p,
+.section[id^="bio-"] ul {
+    font-weight: normal;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.section[id^="bio-"] ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.section[id^="bio-"] li {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin: 0 0 2rem 0;
+    }
+
+    .text-content {
+        padding: 0;
+    }
+    
+    .bio-image img {
+        margin: 0;
+    }
+}
+
+#sobre-nos {
+    padding: 3rem 1.5rem;
+}
+
+#sobre-nos .title {
+    color: #62162f;
+    margin-bottom: 1.5rem;
+}
+
+#sobre-nos p {
+    margin-bottom: 1rem;
+}
+
+#sobre-nos strong {
+    color: #62162f;
+}
+
+#ministerio {
+    padding: 3rem 1.5rem;
+}
+
+#ministerio .columns {
+    margin-top: 2rem;
+}
+
+#ministerio .is-rounded {
+    border: 3px solid #fcd1e2;
+    transition: transform 0.3s ease;
+}
+
+#ministerio .is-rounded:hover {
+    transform: scale(1.05);
+}
+
+#ministerio .has-text-weight-bold {
+    margin-top: 1rem;
+}
