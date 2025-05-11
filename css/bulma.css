@@ -158,3 +158,107 @@
 #ministerio .has-text-weight-bold {
     margin-top: 1rem;
 }
+
+#curso {
+    padding: 4rem 1.5rem;
+}
+
+#curso .box {
+    transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+#curso .box:hover {
+    transform: translateY(-5px);
+}
+
+#curso .title {
+    color: #62162f;
+    margin-bottom: 1.5rem;
+}
+
+#curso .button {
+    background-color: #330000;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#curso .button:hover {
+    background-color: #62162f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#curso ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#curso ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+#curso ul li::before {
+    content: "•";
+    color: #62162f;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@media screen and (max-width: 768px) {
+    #curso .columns {
+        flex-direction: column;
+    }
+    
+    #curso .column {
+        padding: 1rem;
+    }
+    
+    #curso .box {
+        padding: 1.5rem;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 1s ease-in-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+#curso .button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
